@@ -55,7 +55,7 @@ export default function Home() {
     }, 40);
   }
 
-  function useStarter(nextIdea: string) {
+  function applyIdeaStarter(nextIdea: string) {
     setIdea(nextIdea);
     setMappedIdea(nextIdea);
     setShowMap(true);
@@ -203,7 +203,7 @@ export default function Home() {
           <div className="composer-bottom">
             <div className="starter-row" aria-label="Example questions">
               {ideaStarters.map((starter) => (
-                <button type="button" key={starter} onClick={() => useStarter(starter)}>
+                <button type="button" key={starter} onClick={() => applyIdeaStarter(starter)}>
                   {starter}
                 </button>
               ))}
