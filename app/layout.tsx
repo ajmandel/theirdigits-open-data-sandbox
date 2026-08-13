@@ -25,10 +25,12 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(origin),
     title,
     description,
+    alternates: { canonical: "https://theirdigits.com" },
     openGraph: {
       title,
       description,
       type: "website",
+      url: "https://theirdigits.com",
       images: [{ url: `${origin}/og.png`, width: 1731, height: 909, alt: "Ask a better question of open data." }],
     },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
